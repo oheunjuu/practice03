@@ -1,6 +1,11 @@
-package prob06;
+package Calculator;
 
 import java.util.Scanner;
+
+import prob06.Add;
+import prob06.Div;
+import prob06.Mul;
+import prob06.Sub;
 
 public class CalcApp {
 
@@ -23,37 +28,24 @@ public class CalcApp {
 			int a = Integer.parseInt(tokens[0]);
 			int b = Integer.parseInt(tokens[2]);
 			
+			
+			Arith arith= null;
+			
 			switch(tokens[1]){
 			case "+":{
-				
-				Add add= new Add();
-				
-				add.setValue(a,b);
-				int result=add.calc();
-				System.out.println(">>"+result);
+//				arith= new Add();
 				break;
 			}
 			case "-":{
-				Sub sub=new Sub();
-				
-				sub.setValue(a,b);
-				int result=sub.calc();
-				System.out.println(">>"+result);
+//				arith=new Sub();
 				break;
 			}
 			case "*": {
-				Mul mul=new Mul();
-				
-				mul.setValue(a, b);
-				int result=mul.calc();
-				System.out.println(">>"+result);
+	//			arith=new Mul();
 				break;
 			}
 			case "/": {
-				Div div=new Div();
-				div.setValue(a, b);
-				int result=div.calc();
-				System.out.println(">>"+result);
+		//		arith=new Div();
 				break;
 			}
 				
